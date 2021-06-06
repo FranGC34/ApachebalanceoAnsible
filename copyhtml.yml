@@ -1,0 +1,15 @@
+---
+- hosts: webserver-one
+  remote_user: root
+  tasks:
+     - copy:
+        src: html/pagina1.html
+        dest: /var/www/html/index.html
+
+- hosts: webserver-two
+  remote_user: root
+  tasks:
+     - copy:
+        src: html/pagina2.html
+        dest: /var/www/html/index.html
+...
